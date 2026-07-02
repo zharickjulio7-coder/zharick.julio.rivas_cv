@@ -145,6 +145,14 @@
 
 <body class="bg-cream text-ink antialiased">
 
+  <div class="no-print fixed top-4 right-4 z-50">
+    <button onclick="toggleLang()"
+      class="flex items-center gap-1.5 bg-ink text-cream font-display text-sm font-semibold px-4 py-2.5 rounded-full shadow-lg hover:bg-green-deep transition-colors">
+      <iconify-icon icon="solar:global-bold-duotone" width="17"></iconify-icon>
+      <span id="lang-toggle-label">EN</span>
+    </button>
+  </div>
+
   <div class="hidden sm:block fixed inset-0 overflow-hidden pointer-events-none" style="z-index:0;">
     <div class="neon-blob" style="width:440px; height:440px; top:-140px; left:4%; background:#7CFF6B;"></div>
     <div class="neon-blob" style="width:400px; height:400px; top:35%; right:-100px; background:#FF5FA8; animation-delay:-5s;"></div>
@@ -188,7 +196,7 @@
           <div class="flex flex-wrap items-center gap-2 mt-3.5">
             <span class="inline-flex items-center gap-2 text-sm font-semibold text-ink px-3 py-1.5 rounded-full" style="background:rgba(255,255,255,.8);">
               <img src="https://flagpedia.net/data/flags/w1160/es.webp" alt="Español" referrerpolicy="no-referrer" class="w-5 h-5 rounded-full object-cover">
-              Nativo
+              <span data-i18n="native">Nativo</span>
             </span>
             <span class="inline-flex items-center gap-2 text-sm font-semibold text-ink px-3 py-1.5 rounded-full" style="background:rgba(255,255,255,.8);">
               <img src="https://flagpedia.net/data/flags/w1160/gb.webp" alt="Inglés" referrerpolicy="no-referrer" class="w-5 h-5 rounded-full object-cover">
@@ -226,7 +234,7 @@
             </a>
             <span class="inline-flex items-center gap-2 bg-paper text-ink text-sm font-medium px-4 py-2 rounded-full shadow-sm">
               <img src="https://flagpedia.net/data/flags/w1160/es.webp" alt="España" referrerpolicy="no-referrer" class="w-5 h-5 rounded-full object-cover">
-              España
+              <span data-i18n="spain">España</span>
             </span>
             <a href="https://www.linkedin.com/in/zharick-julio-rivas-86a599331" target="_blank"
                class="contact-pill inline-flex items-center gap-2 bg-ink text-cream text-sm font-medium px-4 py-2 rounded-full shadow-sm hover:bg-green-deep">
@@ -245,9 +253,9 @@
       <section class="reveal">
         <h2 class="flex items-center gap-2.5 font-display text-base tracking-wide font-bold text-ink mb-4">
           <iconify-icon icon="solar:user-id-bold-duotone" class="text-green-deep" width="25"></iconify-icon>
-          Perfil profesional
+          <span data-i18n="h-profile">Perfil profesional</span>
         </h2>
-        <p class="text-base leading-relaxed text-ink-soft max-w-3xl mb-5">
+        <p class="text-base leading-relaxed text-ink-soft max-w-3xl mb-5" data-i18n="profile-intro">
           Profesional de International Business con experiencia práctica en logística, coordinación de proyectos y comunicación con stakeholders — potenciada con IA.
         </p>
         <div class="grid sm:grid-cols-2 gap-4">
@@ -256,28 +264,28 @@
               <iconify-icon icon="solar:square-academic-cap-bold-duotone" width="26" class="text-pink-deep"></iconify-icon>
             </div>
             <p class="text-base font-semibold text-ink mb-1">International Business</p>
-            <p class="text-sm text-ink-soft leading-snug">En etapa inicial de carrera, con experiencia práctica en proyectos y logística.</p>
+            <p class="text-sm text-ink-soft leading-snug" data-i18n="profile-card1-desc">En etapa inicial de carrera, con experiencia práctica en proyectos y logística.</p>
           </div>
           <div class="tool-card bg-green-soft/50 rounded-2xl p-5 border border-green/20">
             <div class="w-12 h-12 rounded-xl bg-green-soft flex items-center justify-center mb-3">
               <iconify-icon icon="solar:users-group-rounded-bold-duotone" width="26" class="text-green-deep"></iconify-icon>
             </div>
-            <p class="text-base font-semibold text-ink mb-1">Coordinación &amp; stakeholders</p>
-            <p class="text-sm text-ink-soft leading-snug">Sigo entregables, organizo flujos de trabajo y colaboro con equipos multiculturales.</p>
+            <p class="text-base font-semibold text-ink mb-1" data-i18n="profile-card2-title">Coordinación &amp; stakeholders</p>
+            <p class="text-sm text-ink-soft leading-snug" data-i18n="profile-card2-desc">Sigo entregables, organizo flujos de trabajo y colaboro con equipos multiculturales.</p>
           </div>
           <div class="tool-card rounded-2xl p-5 border border-ink/10" style="background:color-mix(in srgb, var(--color-amber-deep) 12%, transparent)">
             <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-3" style="background:color-mix(in srgb, var(--color-amber-deep) 18%, transparent)">
               <iconify-icon icon="solar:routing-2-bold-duotone" width="26" style="color:var(--color-amber-deep)"></iconify-icon>
             </div>
-            <p class="text-base font-semibold text-ink mb-1">Erasmus · Logística</p>
-            <p class="text-sm text-ink-soft leading-snug">Intercambio en Tecnocampus – UPF, especializándome en Logistics &amp; Supply Chain Management.</p>
+            <p class="text-base font-semibold text-ink mb-1" data-i18n="profile-card3-title">Erasmus · Logística</p>
+            <p class="text-sm text-ink-soft leading-snug" data-i18n="profile-card3-desc">Intercambio en Tecnocampus – UPF, especializándome en Logistics &amp; Supply Chain Management.</p>
           </div>
           <div class="tool-card rounded-2xl p-5 border border-ink/10" style="background:color-mix(in srgb, var(--color-blue-deep) 10%, transparent)">
             <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-3" style="background:color-mix(in srgb, var(--color-blue-deep) 16%, transparent)">
               <iconify-icon icon="solar:cpu-bolt-bold-duotone" width="26" style="color:var(--color-blue-deep)"></iconify-icon>
             </div>
-            <p class="text-base font-semibold text-ink mb-1">IA &amp; datos</p>
-            <p class="text-sm text-ink-soft leading-snug">Uso IA a diario para crear dashboards y sistemas de análisis de datos.</p>
+            <p class="text-base font-semibold text-ink mb-1" data-i18n="profile-card4-title">IA &amp; datos</p>
+            <p class="text-sm text-ink-soft leading-snug" data-i18n="profile-card4-desc">Uso IA a diario para crear dashboards y sistemas de análisis de datos.</p>
           </div>
         </div>
       </section>
@@ -286,7 +294,7 @@
       <section class="reveal">
         <h2 class="flex items-center gap-2.5 font-display text-base tracking-wide font-bold text-ink mb-6">
           <iconify-icon icon="solar:delivery-bold-duotone" class="text-green-deep" width="25"></iconify-icon>
-          Experiencia
+          <span data-i18n="h-experience">Experiencia</span>
         </h2>
 
         <div class="relative pl-12 sm:pl-16 space-y-10">
@@ -307,19 +315,19 @@
                 </div>
                 <div>
                   <h3 class="font-display font-semibold text-lg leading-tight">Freelance Project Coordinator</h3>
-                  <p class="text-sm font-medium text-green-deep mt-1">Capytop LLC · empresa de staffing</p>
+                  <p class="text-sm font-medium text-green-deep mt-1" data-i18n="capytop-company">Capytop LLC · empresa de staffing</p>
                 </div>
                 <span class="self-start inline-flex items-center gap-1.5 text-[13px] font-bold bg-green text-white px-3 py-1.5 rounded-full">
                   <iconify-icon icon="solar:play-circle-bold" width="15"></iconify-icon>
-                  Actual · desde ene. 2026
+                  <span data-i18n="capytop-date">Actual · desde ene. 2026</span>
                 </span>
                 <span class="self-start inline-flex items-center gap-2 text-sm font-bold px-3 py-1.5 rounded-full" style="background:rgba(238,142,171,.32); color:var(--color-pink-deep);">
                   <iconify-icon icon="solar:users-group-two-rounded-bold-duotone" width="18"></iconify-icon>
-                  Equipo de 8
+                  <span data-i18n="team-8">Equipo de 8</span>
                 </span>
                 <span class="self-start inline-flex items-center gap-1.5 text-sm font-semibold text-ink-soft bg-paper border border-ink/5 shadow-sm px-3 py-1.5 rounded-full">
                   <iconify-icon icon="solar:global-bold-duotone" width="16" class="text-green-deep"></iconify-icon>
-                  Remoto
+                  <span data-i18n="remote">Remoto</span>
                 </span>
               </div>
               <div class="p-5 sm:p-6">
@@ -327,17 +335,17 @@
                   <div class="w-10 h-10 rounded-full bg-paper shadow-sm flex items-center justify-center shrink-0">
                     <iconify-icon icon="solar:lightbulb-bold-duotone" width="21" class="text-green-deep"></iconify-icon>
                   </div>
-                  <p class="text-lg font-semibold text-ink leading-snug">Coordino en inglés el desarrollo de "Smart Picking" en ShipHero, optimizando procesos operativos escalables y colaborando de forma transversal con el equipo técnico, PM y liderazgo de operaciones.</p>
+                  <p class="text-lg font-semibold text-ink leading-snug" data-i18n="capytop-summary">Coordino en inglés el desarrollo de "Smart Picking" en ShipHero, optimizando procesos operativos escalables y colaborando de forma transversal con el equipo técnico, PM y liderazgo de operaciones.</p>
                 </div>
                 <ul class="text-base text-ink-soft space-y-2.5 list-none">
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Formo parte de un equipo de <strong class="text-ink">8 personas</strong>: project manager, desarrolladores frontend/backend, QA y responsables de operaciones.</span></li>
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Apoyo al equipo dedicado a <strong class="text-ink">ShipHero</strong>, dentro de la línea vertical <strong class="text-ink">Wholesale</strong> de la plataforma.</span></li>
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Coordino y comunico en inglés entre desarrolladores, PM y stakeholders dentro del proyecto <strong class="text-ink">"Smart Picking"</strong>, un flujo diseñado para que el personal de picking localice productos dentro de pallets de forma rápida y sencilla.</span></li>
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Contribuyo a optimizar <strong class="text-ink">procesos escalables</strong> dentro de Operaciones, buscando que los flujos de trabajo se sostengan a medida que crece la operación de ShipHero.</span></li>
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Colaboro en <strong class="text-ink">project management</strong> con desarrolladores: seguimiento de tareas, sprints y ciclos de <strong class="text-ink">testing</strong>.</span></li>
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Trabajo de forma <strong class="text-ink">transversal</strong> con perfiles de liderazgo del proyecto — PM, desarrolladores y stakeholders de operaciones — para resolver retos con impacto real en eficiencia y experiencia del usuario final.</span></li>
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Construimos varios <strong class="text-ink">sistemas de información pequeños</strong> con Python, Django, VS Code y Claude Code para automatizar flujos operativos, apoyándome en IA para generar código a partir de skills, planes y documentación ya entendidos.</span></li>
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Preparo actualizaciones de estado, documentación y reportes en <strong class="text-ink">Excel y dashboards</strong> para mantener alineados a los stakeholders, con una mentalidad hands-on orientada a la ejecución.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="capytop-b1">Formo parte de un equipo de <strong class="text-ink">8 personas</strong>: project manager, desarrolladores frontend/backend, QA y responsables de operaciones.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="capytop-b2">Apoyo al equipo dedicado a <strong class="text-ink">ShipHero</strong>, dentro de la línea vertical <strong class="text-ink">Wholesale</strong> de la plataforma.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="capytop-b3">Coordino y comunico en inglés entre desarrolladores, PM y stakeholders dentro del proyecto <strong class="text-ink">"Smart Picking"</strong>, un flujo diseñado para que el personal de picking localice productos dentro de pallets de forma rápida y sencilla.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="capytop-b4">Contribuyo a optimizar <strong class="text-ink">procesos escalables</strong> dentro de Operaciones, buscando que los flujos de trabajo se sostengan a medida que crece la operación de ShipHero.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="capytop-b5">Colaboro en <strong class="text-ink">project management</strong> con desarrolladores: seguimiento de tareas, sprints y ciclos de <strong class="text-ink">testing</strong>.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="capytop-b6">Trabajo de forma <strong class="text-ink">transversal</strong> con perfiles de liderazgo del proyecto — PM, desarrolladores y stakeholders de operaciones — para resolver retos con impacto real en eficiencia y experiencia del usuario final.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="capytop-b7">Construimos varios <strong class="text-ink">sistemas de información pequeños</strong> con Python, Django, VS Code y Claude Code para automatizar flujos operativos, apoyándome en IA para generar código a partir de skills, planes y documentación ya entendidos.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="capytop-b8">Preparo actualizaciones de estado, documentación y reportes en <strong class="text-ink">Excel y dashboards</strong> para mantener alineados a los stakeholders, con una mentalidad hands-on orientada a la ejecución.</span></li>
                 </ul>
               </div>
             </div>
@@ -363,11 +371,11 @@
                 </span>
                 <span class="self-start inline-flex items-center gap-2 text-sm font-bold px-3 py-1.5 rounded-full" style="background:rgba(238,142,171,.28); color:var(--color-pink-deep);">
                   <iconify-icon icon="solar:users-group-two-rounded-bold-duotone" width="18"></iconify-icon>
-                  Equipo de 5
+                  <span data-i18n="team-5">Equipo de 5</span>
                 </span>
                 <span class="self-start inline-flex items-center gap-1.5 text-sm text-ink-soft bg-cream px-3 py-1.5 rounded-full">
                   <img src="https://flagpedia.net/data/flags/w1160/co.webp" alt="Bandera de Colombia" referrerpolicy="no-referrer" class="w-4 h-4 rounded-full object-cover">
-                  Colombia
+                  <span data-i18n="colombia">Colombia</span>
                 </span>
               </div>
               <div class="p-5 sm:p-6">
@@ -375,15 +383,15 @@
                   <div class="w-10 h-10 rounded-full bg-cream shadow-sm flex items-center justify-center shrink-0">
                     <iconify-icon icon="solar:lightbulb-bold-duotone" width="21" class="text-green-deep"></iconify-icon>
                   </div>
-                  <p class="text-lg font-semibold text-ink leading-snug">Fui asistente logística en un evento empresarial que reúne a negociadores de toda Colombia para impulsar el progreso económico de la región — acompañé speakers, coordiné personal y gestioné la agenda del evento.</p>
+                  <p class="text-lg font-semibold text-ink leading-snug" data-i18n="expo-summary">Fui asistente logística en un evento empresarial que reúne a negociadores de toda Colombia para impulsar el progreso económico de la región — acompañé speakers, coordiné personal y gestioné la agenda del evento.</p>
                 </div>
                 <ul class="text-base text-ink-soft space-y-2.5">
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Trabajé junto a un equipo de <strong class="text-ink">5 personas</strong>: coordinador del evento, asistentes de logística, protocolo de speakers y encargado de proveedores.</span></li>
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Acompañé a los <strong class="text-ink">speakers y ponentes</strong> durante el evento, asegurando que cumplieran su agenda y tuvieran todo lo necesario en cada sesión.</span></li>
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Gestioné al <strong class="text-ink">personal de logística</strong> y la <strong class="text-ink">agenda general</strong> del evento, coordinando tiempos entre paneles, negociaciones y actividades paralelas.</span></li>
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Apoyé la organización de los espacios donde <strong class="text-ink">negociadores y empresarios de toda Colombia</strong> discutían avances, mejoras y logros para la economía local.</span></li>
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Gestión de materiales, documentación y distribución ante necesidades cambiantes.</span></li>
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Serví como punto de contacto entre proveedores externos y el equipo interno para resolver imprevistos el mismo día del evento.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="expo-b1">Trabajé junto a un equipo de <strong class="text-ink">5 personas</strong>: coordinador del evento, asistentes de logística, protocolo de speakers y encargado de proveedores.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="expo-b2">Acompañé a los <strong class="text-ink">speakers y ponentes</strong> durante el evento, asegurando que cumplieran su agenda y tuvieran todo lo necesario en cada sesión.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="expo-b3">Gestioné al <strong class="text-ink">personal de logística</strong> y la <strong class="text-ink">agenda general</strong> del evento, coordinando tiempos entre paneles, negociaciones y actividades paralelas.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="expo-b4">Apoyé la organización de los espacios donde <strong class="text-ink">negociadores y empresarios de toda Colombia</strong> discutían avances, mejoras y logros para la economía local.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="expo-b5">Gestión de materiales, documentación y distribución ante necesidades cambiantes.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="expo-b6">Serví como punto de contacto entre proveedores externos y el equipo interno para resolver imprevistos el mismo día del evento.</span></li>
                 </ul>
               </div>
             </div>
@@ -409,11 +417,11 @@
                 </span>
                 <span class="self-start inline-flex items-center gap-2 text-sm font-bold px-3 py-1.5 rounded-full" style="background:rgba(238,142,171,.28); color:var(--color-pink-deep);">
                   <iconify-icon icon="solar:users-group-two-rounded-bold-duotone" width="18"></iconify-icon>
-                  Equipo de 4
+                  <span data-i18n="team-4">Equipo de 4</span>
                 </span>
                 <span class="self-start inline-flex items-center gap-1.5 text-sm text-ink-soft bg-cream px-3 py-1.5 rounded-full">
                   <img src="https://flagpedia.net/data/flags/w1160/co.webp" alt="Bandera de Colombia" referrerpolicy="no-referrer" class="w-4 h-4 rounded-full object-cover">
-                  Colombia
+                  <span data-i18n="colombia">Colombia</span>
                 </span>
               </div>
               <div class="p-5 sm:p-6">
@@ -421,13 +429,13 @@
                   <div class="w-10 h-10 rounded-full bg-cream shadow-sm flex items-center justify-center shrink-0">
                     <iconify-icon icon="solar:lightbulb-bold-duotone" width="21" class="text-green-deep"></iconify-icon>
                   </div>
-                  <p class="text-lg font-semibold text-ink leading-snug">Mi primera edición con Probarranquilla: el mismo tipo de evento empresarial con negociadores de toda Colombia, enfocándome en el inventario y los materiales que hacen posible el evento.</p>
+                  <p class="text-lg font-semibold text-ink leading-snug" data-i18n="pro-summary">Mi primera edición con Probarranquilla: el mismo tipo de evento empresarial con negociadores de toda Colombia, enfocándome en el inventario y los materiales que hacen posible el evento.</p>
                 </div>
                 <ul class="text-base text-ink-soft space-y-2.5">
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Colaboré con un equipo de <strong class="text-ink">4 personas</strong>: supervisor de inventario, auxiliares de logística del evento y coordinador de materiales.</span></li>
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Controlé el inventario y la distribución de materiales para los espacios de negociación y stands durante el evento.</span></li>
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Registros precisos y priorización de tareas urgentes durante el montaje y desarrollo del evento.</span></li>
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Apoyé en la conciliación de existencias físicas contra el sistema para que cada espacio contara con lo necesario a tiempo.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="pro-b1">Colaboré con un equipo de <strong class="text-ink">4 personas</strong>: supervisor de inventario, auxiliares de logística del evento y coordinador de materiales.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="pro-b2">Controlé el inventario y la distribución de materiales para los espacios de negociación y stands durante el evento.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="pro-b3">Registros precisos y priorización de tareas urgentes durante el montaje y desarrollo del evento.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="pro-b4">Apoyé en la conciliación de existencias físicas contra el sistema para que cada espacio contara con lo necesario a tiempo.</span></li>
                 </ul>
               </div>
             </div>
@@ -449,15 +457,15 @@
                 </div>
                 <span class="self-start inline-flex items-center gap-1.5 text-sm font-semibold text-ink-soft bg-cream px-3 py-1.5 rounded-full">
                   <iconify-icon icon="solar:calendar-bold-duotone" width="16" class="text-green-deep"></iconify-icon>
-                  1 año
+                  <span data-i18n="one-year">1 año</span>
                 </span>
                 <span class="self-start inline-flex items-center gap-2 text-sm font-bold px-3 py-1.5 rounded-full" style="background:rgba(238,142,171,.28); color:var(--color-pink-deep);">
                   <iconify-icon icon="solar:users-group-two-rounded-bold-duotone" width="18"></iconify-icon>
-                  Equipo de 5
+                  <span data-i18n="team-5">Equipo de 5</span>
                 </span>
                 <span class="self-start inline-flex items-center gap-1.5 text-sm text-ink-soft bg-cream px-3 py-1.5 rounded-full">
                   <img src="https://flagpedia.net/data/flags/w1160/co.webp" alt="Bandera de Colombia" referrerpolicy="no-referrer" class="w-4 h-4 rounded-full object-cover">
-                  Colombia
+                  <span data-i18n="colombia">Colombia</span>
                 </span>
               </div>
               <div class="p-5 sm:p-6">
@@ -465,13 +473,13 @@
                   <div class="w-10 h-10 rounded-full bg-cream shadow-sm flex items-center justify-center shrink-0">
                     <iconify-icon icon="solar:lightbulb-bold-duotone" width="21" class="text-green-deep"></iconify-icon>
                   </div>
-                  <p class="text-lg font-semibold text-ink leading-snug">Gestioné documentación, agendas y comunicación interna para el funcionamiento diario del área administrativa.</p>
+                  <p class="text-lg font-semibold text-ink leading-snug" data-i18n="un-summary">Gestioné documentación, agendas y comunicación interna para el funcionamiento diario del área administrativa.</p>
                 </div>
                 <ul class="text-base text-ink-soft space-y-2.5">
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Formé parte de un equipo administrativo de <strong class="text-ink">5 personas</strong>, colaborando de cerca con la jefatura de área y el archivo institucional.</span></li>
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Documentación, agendas y comunicación interna para actividades administrativas diarias.</span></li>
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Coordinación operativa y atención a solicitudes de estudiantes y personal.</span></li>
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Apoyé la organización de reuniones y la actualización de bases de datos internas del departamento.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="un-b1">Formé parte de un equipo administrativo de <strong class="text-ink">5 personas</strong>, colaborando de cerca con la jefatura de área y el archivo institucional.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="un-b2">Documentación, agendas y comunicación interna para actividades administrativas diarias.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="un-b3">Coordinación operativa y atención a solicitudes de estudiantes y personal.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="un-b4">Apoyé la organización de reuniones y la actualización de bases de datos internas del departamento.</span></li>
                 </ul>
               </div>
             </div>
@@ -493,15 +501,15 @@
                 </div>
                 <span class="self-start inline-flex items-center gap-1.5 text-sm font-semibold text-ink-soft bg-cream px-3 py-1.5 rounded-full">
                   <iconify-icon icon="solar:calendar-bold-duotone" width="16" class="text-green-deep"></iconify-icon>
-                  Contrato de 1 mes
+                  <span data-i18n="one-month">Contrato de 1 mes</span>
                 </span>
                 <span class="self-start inline-flex items-center gap-2 text-sm font-bold px-3 py-1.5 rounded-full" style="background:rgba(238,142,171,.28); color:var(--color-pink-deep);">
                   <iconify-icon icon="solar:users-group-two-rounded-bold-duotone" width="18"></iconify-icon>
-                  Equipo de 3
+                  <span data-i18n="team-3">Equipo de 3</span>
                 </span>
                 <span class="self-start inline-flex items-center gap-1.5 text-sm text-ink-soft bg-cream px-3 py-1.5 rounded-full">
                   <img src="https://flagpedia.net/data/flags/w1160/co.webp" alt="Bandera de Colombia" referrerpolicy="no-referrer" class="w-4 h-4 rounded-full object-cover">
-                  Colombia
+                  <span data-i18n="colombia">Colombia</span>
                 </span>
               </div>
               <div class="p-5 sm:p-6">
@@ -509,13 +517,13 @@
                   <div class="w-10 h-10 rounded-full bg-cream shadow-sm flex items-center justify-center shrink-0">
                     <iconify-icon icon="solar:lightbulb-bold-duotone" width="21" class="text-green-deep"></iconify-icon>
                   </div>
-                  <p class="text-lg font-semibold text-ink leading-snug">Di soporte logístico y documental durante un pico estacional de ventas, priorizando tareas bajo tiempo limitado.</p>
+                  <p class="text-lg font-semibold text-ink leading-snug" data-i18n="kirius-summary">Di soporte logístico y documental durante un pico estacional de ventas, priorizando tareas bajo tiempo limitado.</p>
                 </div>
                 <ul class="text-base text-ink-soft space-y-2.5">
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Trabajé con un equipo estacional de <strong class="text-ink">3 personas</strong>: encargado de bodega, auxiliar contable y coordinador de ventas.</span></li>
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Procesamiento de facturas comerciales y documentación de compras en temporada alta.</span></li>
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Soporte en verificación de inventario, preparación de pedidos y distribución.</span></li>
-                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span>Ayudé a mantener el ritmo de despachos durante los picos de demanda de la temporada.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="kirius-b1">Trabajé con un equipo estacional de <strong class="text-ink">3 personas</strong>: encargado de bodega, auxiliar contable y coordinador de ventas.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="kirius-b2">Procesamiento de facturas comerciales y documentación de compras en temporada alta.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="kirius-b3">Soporte en verificación de inventario, preparación de pedidos y distribución.</span></li>
+                  <li class="flex gap-2.5"><iconify-icon icon="solar:route-bold" width="18" class="text-green-deep mt-1 shrink-0"></iconify-icon><span data-i18n-html="kirius-b4">Ayudé a mantener el ritmo de despachos durante los picos de demanda de la temporada.</span></li>
                 </ul>
               </div>
             </div>
@@ -531,7 +539,7 @@
         <section class="reveal">
           <h2 class="flex items-center gap-2.5 font-display text-base tracking-wide font-bold text-ink mb-5">
             <iconify-icon icon="solar:widget-bold-duotone" class="text-pink-deep" width="25"></iconify-icon>
-            Software &amp; herramientas
+            <span data-i18n="h-tools">Software &amp; herramientas</span>
           </h2>
           <div class="grid grid-cols-3 sm:grid-cols-4 gap-3">
             <div class="tool-card flex flex-col items-center justify-center gap-2 bg-cream rounded-2xl py-4 border border-ink/5">
@@ -583,14 +591,14 @@
               <span class="text-[13px] font-medium text-ink-soft">Codex</span>
             </div>
           </div>
-          <p class="text-sm text-ink-soft mt-4 leading-relaxed">Uso herramientas de IA a diario para potenciar mi trabajo: automatizar tareas, construir dashboards y analizar datos.</p>
+          <p class="text-sm text-ink-soft mt-4 leading-relaxed" data-i18n="tools-ai-note">Uso herramientas de IA a diario para potenciar mi trabajo: automatizar tareas, construir dashboards y analizar datos.</p>
         </section>
 
         <!-- IDIOMAS -->
         <section class="reveal">
           <h2 class="flex items-center gap-2.5 font-display text-base tracking-wide font-bold text-ink mb-5">
             <iconify-icon icon="solar:global-bold-duotone" class="text-pink-deep" width="25"></iconify-icon>
-            Idiomas
+            <span data-i18n="h-languages">Idiomas</span>
           </h2>
           <div class="space-y-4">
 
@@ -598,8 +606,8 @@
               <img src="https://flagpedia.net/data/flags/w1160/es.webp" alt="Bandera de España" referrerpolicy="no-referrer" class="w-11 h-11 rounded-full object-cover border-2 border-paper shadow-sm shrink-0">
               <div class="flex-1">
                 <div class="flex items-center justify-between mb-4">
-                  <span class="text-base font-medium text-ink">Español</span>
-                  <span class="text-sm font-bold" style="color:#4C7A26">Nativo</span>
+                  <span class="text-base font-medium text-ink" data-i18n="lang-es">Español</span>
+                  <span class="text-sm font-bold" style="color:#4C7A26" data-i18n="native">Nativo</span>
                 </div>
                 <div class="relative">
                   <iconify-icon icon="solar:map-point-bold" width="28" class="level-marker" style="left:100%; color:#3F6B24;"></iconify-icon>
@@ -619,7 +627,7 @@
               <img src="https://flagpedia.net/data/flags/w1160/gb.webp" alt="Bandera de Reino Unido" referrerpolicy="no-referrer" class="w-11 h-11 rounded-full object-cover border-2 border-paper shadow-sm shrink-0">
               <div class="flex-1">
                 <div class="flex items-center justify-between mb-4">
-                  <span class="text-base font-medium text-ink">Inglés</span>
+                  <span class="text-base font-medium text-ink" data-i18n="lang-en">Inglés</span>
                   <span class="text-sm font-bold" style="color:#6BA136">B2</span>
                 </div>
                 <div class="relative">
@@ -640,7 +648,7 @@
               <img src="https://flagpedia.net/data/flags/w1160/fr.webp" alt="Bandera de Francia" referrerpolicy="no-referrer" class="w-11 h-11 rounded-full object-cover border-2 border-paper shadow-sm shrink-0">
               <div class="flex-1">
                 <div class="flex items-center justify-between mb-4">
-                  <span class="text-base font-medium text-ink">Francés</span>
+                  <span class="text-base font-medium text-ink" data-i18n="lang-fr">Francés</span>
                   <span class="text-sm font-bold" style="color:#8ABE4C">B1</span>
                 </div>
                 <div class="relative">
@@ -668,14 +676,14 @@
         <section class="reveal">
           <h2 class="flex items-center gap-2.5 font-display text-base tracking-wide font-bold text-ink mb-5">
             <iconify-icon icon="solar:route-bold-duotone" class="text-pink-deep" width="25"></iconify-icon>
-            Competencias clave
+            <span data-i18n="h-competencies">Competencias clave</span>
           </h2>
 
           <div class="space-y-5">
 
             <div>
               <p class="text-[13px] font-bold tracking-wide text-pink-deep mb-2 flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full bg-pink inline-block"></span> Coordinación
+                <span class="w-2 h-2 rounded-full bg-pink inline-block"></span> <span data-i18n="cat-coordination">Coordinación</span>
               </p>
               <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
                 <div class="tool-card pop-in flex flex-col gap-2 bg-pink-soft/70 rounded-xl p-3 border border-pink/20">
@@ -695,7 +703,7 @@
 
             <div>
               <p class="text-[13px] font-bold tracking-wide text-green-deep mb-2 flex items-center gap-1.5">
-                <span class="w-2 h-2 rounded-full bg-green inline-block"></span> Logística
+                <span class="w-2 h-2 rounded-full bg-green inline-block"></span> <span data-i18n="cat-logistics">Logística</span>
               </p>
               <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
                 <div class="tool-card pop-in flex flex-col gap-2 bg-green-soft/70 rounded-xl p-3 border border-green/20" style="animation-delay:.24s">
@@ -715,7 +723,7 @@
 
             <div>
               <p class="text-[13px] font-bold tracking-wide mb-2 flex items-center gap-1.5" style="color:var(--color-amber-deep)">
-                <span class="w-2 h-2 rounded-full inline-block" style="background:var(--color-amber-deep)"></span> Procesos &amp; datos
+                <span class="w-2 h-2 rounded-full inline-block" style="background:var(--color-amber-deep)"></span> <span data-i18n="cat-process">Procesos &amp; datos</span>
               </p>
               <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
                 <div class="tool-card pop-in flex flex-col gap-2 bg-yellow-soft/70 rounded-xl p-3 border border-ink/10" style="animation-delay:.48s">
@@ -740,7 +748,7 @@
         <section class="reveal">
           <h2 class="flex items-center gap-2.5 font-display text-base tracking-wide font-bold text-ink mb-5">
             <iconify-icon icon="solar:square-academic-cap-bold-duotone" class="text-pink-deep" width="25"></iconify-icon>
-            Educación
+            <span data-i18n="h-education">Educación</span>
           </h2>
           <div class="space-y-4">
             <div class="bg-cream rounded-2xl border border-ink/5 p-4">
@@ -749,7 +757,7 @@
                 <img src="https://flagpedia.net/data/flags/w1160/co.webp" alt="Colombia" referrerpolicy="no-referrer" class="w-4 h-4 rounded-full object-cover">
                 Universidad del Norte · Barranquilla, Colombia
               </p>
-              <p class="text-[13px] text-green-deep font-medium mt-1.5">Prevista · marzo 2027</p>
+              <p class="text-[13px] text-green-deep font-medium mt-1.5" data-i18n="edu-expected">Prevista · marzo 2027</p>
             </div>
             <div class="bg-cream rounded-2xl border border-ink/5 p-4">
               <p class="text-base font-semibold leading-snug">Erasmus — Logistics &amp; Supply Chain Mgmt.</p>
@@ -757,7 +765,7 @@
                 <img src="https://flagpedia.net/data/flags/w1160/es.webp" alt="España" referrerpolicy="no-referrer" class="w-4 h-4 rounded-full object-cover">
                 Tecnocampus · Universitat Pompeu Fabra, Mataró
               </p>
-              <p class="text-[13px] text-green-deep font-medium mt-1.5">Completado · 2026</p>
+              <p class="text-[13px] text-green-deep font-medium mt-1.5" data-i18n="edu-completed">Completado · 2026</p>
             </div>
             <div class="bg-cream rounded-2xl border border-ink/5 p-4">
               <p class="text-base font-semibold leading-snug">Administrative Assistant, English Emphasis</p>
@@ -775,16 +783,16 @@
       <section class="reveal">
         <h2 class="flex items-center gap-2.5 font-display text-base tracking-wide font-bold text-ink mb-5">
           <iconify-icon icon="solar:medal-ribbons-star-bold-duotone" class="text-green-deep" width="25"></iconify-icon>
-          Liderazgo adicional
+          <span data-i18n="h-leadership">Liderazgo adicional</span>
         </h2>
         <div class="grid sm:grid-cols-3 gap-4">
           <div class="tool-card bg-pink-soft/60 rounded-2xl p-5 border border-pink/20">
             <div class="w-12 h-12 rounded-lg bg-paper flex items-center justify-center mb-3 shadow-sm">
               <iconify-icon icon="solar:calendar-mark-bold-duotone" width="26" class="text-pink-deep"></iconify-icon>
             </div>
-            <p class="text-base font-semibold">Secretaria General</p>
+            <p class="text-base font-semibold" data-i18n="lead1-title">Secretaria General</p>
             <p class="text-sm text-ink-soft mt-1">PANGEA · 2024</p>
-            <p class="text-sm text-ink-soft mt-2.5 leading-snug">Preparación de reuniones, actas y comunicación interna.</p>
+            <p class="text-sm text-ink-soft mt-2.5 leading-snug" data-i18n="lead1-desc">Preparación de reuniones, actas y comunicación interna.</p>
           </div>
           <div class="tool-card bg-yellow-soft/60 rounded-2xl p-5 border border-ink/10">
             <div class="w-12 h-12 rounded-lg bg-paper flex items-center justify-center mb-3 shadow-sm">
@@ -792,15 +800,15 @@
             </div>
             <p class="text-base font-semibold">Community Manager</p>
             <p class="text-sm text-ink-soft mt-1">Meeteam Foundation</p>
-            <p class="text-sm text-ink-soft mt-2.5 leading-snug">Comunicación digital y coordinación de contenido.</p>
+            <p class="text-sm text-ink-soft mt-2.5 leading-snug" data-i18n="lead2-desc">Comunicación digital y coordinación de contenido.</p>
           </div>
           <div class="tool-card bg-green-soft/60 rounded-2xl p-5 border border-green/20">
             <div class="w-12 h-12 rounded-lg bg-paper flex items-center justify-center mb-3 shadow-sm">
               <iconify-icon icon="solar:users-group-two-rounded-bold-duotone" width="26" class="text-green-deep"></iconify-icon>
             </div>
-            <p class="text-base font-semibold">Líder de grupo infantil</p>
+            <p class="text-base font-semibold" data-i18n="lead3-title">Líder de grupo infantil</p>
             <p class="text-sm text-ink-soft mt-1">Alas Moradas Foundation</p>
-            <p class="text-sm text-ink-soft mt-2.5 leading-snug">Actividades grupales y coordinación de voluntariado.</p>
+            <p class="text-sm text-ink-soft mt-2.5 leading-snug" data-i18n="lead3-desc">Actividades grupales y coordinación de voluntariado.</p>
           </div>
         </div>
       </section>
@@ -809,10 +817,114 @@
 
     <div class="manifest-rule"></div>
     <footer class="px-5 sm:px-8 md:px-14 py-5 text-center text-xs text-ink-soft tracking-wide">
-      Zharick Julio Rivas &nbsp;·&nbsp; CV generado para procesos de selección &nbsp;·&nbsp; España
+      Zharick Julio Rivas &nbsp;·&nbsp; <span data-i18n="footer-text">CV generado para procesos de selección</span> &nbsp;·&nbsp; <span data-i18n="spain">España</span>
     </footer>
 
   </main>
+
+<script>
+  const EN = {
+    "native": "Native",
+    "spain": "Spain",
+    "h-profile": "Professional profile",
+    "profile-intro": "International Business professional with hands-on experience in logistics, project coordination, and stakeholder communication — AI-powered.",
+    "profile-card1-desc": "Early-career professional with hands-on experience in projects and logistics.",
+    "profile-card2-title": "Coordination &amp; stakeholders",
+    "profile-card2-desc": "I track deliverables, organize workflows, and collaborate with multicultural teams.",
+    "profile-card3-title": "Erasmus · Logistics",
+    "profile-card3-desc": "Exchange at Tecnocampus – UPF, specializing in Logistics &amp; Supply Chain Management.",
+    "profile-card4-title": "AI &amp; data",
+    "profile-card4-desc": "I use AI daily to build dashboards and data analysis systems.",
+    "h-experience": "Experience",
+    "capytop-company": "Capytop LLC · staffing company",
+    "capytop-date": "Current · since Jan 2026",
+    "team-8": "Team of 8",
+    "remote": "Remote",
+    "capytop-summary": "I coordinate the development of ShipHero's \"Smart Picking\" in English, optimizing scalable operational processes and collaborating cross-functionally with the technical team, PM, and operations leadership.",
+    "team-5": "Team of 5",
+    "colombia": "Colombia",
+    "expo-summary": "I was a logistics assistant at a business event that brings together negotiators from across Colombia to drive the region's economic progress — I supported speakers, coordinated staff, and managed the event agenda.",
+    "team-4": "Team of 4",
+    "pro-summary": "My first edition with Probarranquilla: the same type of business event with negotiators from across Colombia, focused on the inventory and materials that make the event possible.",
+    "one-year": "1 year",
+    "un-summary": "I managed documentation, schedules, and internal communication for the administrative area's day-to-day operations.",
+    "one-month": "1-month contract",
+    "team-3": "Team of 3",
+    "kirius-summary": "I provided logistics and documentation support during a seasonal sales peak, prioritizing tasks under tight deadlines.",
+    "h-tools": "Software &amp; tools",
+    "tools-ai-note": "I use AI tools daily to power my work: automating tasks, building dashboards, and analyzing data.",
+    "h-languages": "Languages",
+    "lang-es": "Spanish",
+    "lang-en": "English",
+    "lang-fr": "French",
+    "h-competencies": "Key competencies",
+    "cat-coordination": "Coordination",
+    "cat-logistics": "Logistics",
+    "cat-process": "Process &amp; data",
+    "h-education": "Education",
+    "edu-expected": "Expected · March 2027",
+    "edu-completed": "Completed · 2026",
+    "h-leadership": "Additional leadership",
+    "lead1-title": "General Secretary",
+    "lead1-desc": "Prepared meetings, minutes, and internal communication.",
+    "lead2-desc": "Digital communication and content coordination.",
+    "lead3-title": "Children's group leader",
+    "lead3-desc": "Group activities and volunteer coordination.",
+    "footer-text": "CV generated for recruitment processes"
+  };
+
+  const EN_HTML = {
+    "capytop-b1": 'I\'m part of a team of <strong class="text-ink">8 people</strong>: project manager, frontend/backend developers, QA, and operations leads.',
+    "capytop-b2": 'I support the team dedicated to <strong class="text-ink">ShipHero</strong>, within the platform\'s <strong class="text-ink">Wholesale</strong> vertical.',
+    "capytop-b3": 'I coordinate and communicate in English between developers, PM, and stakeholders on the <strong class="text-ink">"Smart Picking"</strong> project, a workflow designed to help picking staff locate products inside pallets quickly and easily.',
+    "capytop-b4": 'I help optimize <strong class="text-ink">scalable processes</strong> within Operations, ensuring workflows hold up as ShipHero\'s operation grows.',
+    "capytop-b5": 'I collaborate on <strong class="text-ink">project management</strong> with developers: task tracking, sprints, and <strong class="text-ink">testing</strong> cycles.',
+    "capytop-b6": 'I work <strong class="text-ink">cross-functionally</strong> with project leadership profiles — PM, developers, and operations stakeholders — to solve challenges with real impact on efficiency and end-user experience.',
+    "capytop-b7": 'We built several small <strong class="text-ink">information systems</strong> with Python, Django, VS Code, and Claude Code to automate operational workflows, using AI to generate code from skills, plans, and already-understood documentation.',
+    "capytop-b8": 'I prepare status updates, documentation, and reports in <strong class="text-ink">Excel and dashboards</strong> to keep stakeholders aligned, with a hands-on, execution-oriented mindset.',
+    "expo-b1": 'I worked alongside a team of <strong class="text-ink">5 people</strong>: event coordinator, logistics assistants, speaker protocol, and vendor liaison.',
+    "expo-b2": 'I accompanied <strong class="text-ink">speakers and presenters</strong> throughout the event, making sure they kept to their schedule and had everything they needed for each session.',
+    "expo-b3": 'I managed the <strong class="text-ink">logistics staff</strong> and the event\'s <strong class="text-ink">overall agenda</strong>, coordinating timing between panels, negotiations, and parallel activities.',
+    "expo-b4": 'I helped organize the spaces where <strong class="text-ink">negotiators and business owners from across Colombia</strong> discussed progress, improvements, and achievements for the local economy.',
+    "expo-b5": 'Managed materials, documentation, and distribution amid changing needs.',
+    "expo-b6": 'I served as the point of contact between external vendors and the internal team to resolve day-of issues.',
+    "pro-b1": 'I collaborated with a team of <strong class="text-ink">4 people</strong>: inventory supervisor, event logistics assistants, and materials coordinator.',
+    "pro-b2": 'I managed inventory and material distribution for negotiation spaces and booths during the event.',
+    "pro-b3": 'Accurate record-keeping and prioritization of urgent tasks during setup and the event itself.',
+    "pro-b4": 'I helped reconcile physical stock against the system so every space had what it needed on time.',
+    "un-b1": 'I was part of a <strong class="text-ink">5-person</strong> administrative team, working closely with area leadership and the institutional archive.',
+    "un-b2": 'Documentation, scheduling, and internal communication for daily administrative activities.',
+    "un-b3": 'Operational coordination and handling requests from students and staff.',
+    "un-b4": 'I helped organize meetings and update the department\'s internal databases.',
+    "kirius-b1": 'I worked with a seasonal team of <strong class="text-ink">3 people</strong>: warehouse lead, accounting assistant, and sales coordinator.',
+    "kirius-b2": 'Processed commercial invoices and purchase documentation during peak season.',
+    "kirius-b3": 'Supported inventory checks, order preparation, and distribution.',
+    "kirius-b4": 'I helped keep up shipment pace during the season\'s demand peaks.'
+  };
+
+  let currentLang = 'es';
+
+  function initLang(){
+    document.querySelectorAll('[data-i18n]').forEach(el => { el.dataset.es = el.textContent; });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => { el.dataset.esHtml = el.innerHTML; });
+  }
+
+  function toggleLang(){
+    currentLang = currentLang === 'es' ? 'en' : 'es';
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      el.innerHTML = currentLang === 'es' ? el.dataset.es : (EN[key] || el.dataset.es);
+    });
+    document.querySelectorAll('[data-i18n-html]').forEach(el => {
+      const key = el.dataset.i18nHtml;
+      el.innerHTML = currentLang === 'es' ? el.dataset.esHtml : (EN_HTML[key] || el.dataset.esHtml);
+    });
+    document.documentElement.lang = currentLang;
+    document.getElementById('lang-toggle-label').textContent = currentLang === 'es' ? 'EN' : 'ES';
+  }
+
+  initLang();
+</script>
 
 </body>
 </html>
