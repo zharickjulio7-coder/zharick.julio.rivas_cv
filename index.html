@@ -73,11 +73,16 @@
     box-shadow: 0 0 0 5px var(--color-green-soft), 0 4px 12px rgba(86,107,54,.35);
   }
 
-  .reveal{ opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
-  .reveal.in{ opacity: 1; transform: translateY(0); }
-
-  .pop-in{ opacity:0; transform: translateY(10px) scale(.9); transition: opacity .45s ease, transform .45s cubic-bezier(.34,1.56,.64,1); }
-  .pop-in.in{ opacity:1; transform: translateY(0) scale(1); }
+  @keyframes fadeInUp{
+    from{ opacity: 0; transform: translateY(16px); }
+    to{ opacity: 1; transform: translateY(0); }
+  }
+  @keyframes popIn{
+    from{ opacity: 0; transform: translateY(10px) scale(.9); }
+    to{ opacity: 1; transform: translateY(0) scale(1); }
+  }
+  .reveal{ animation: fadeInUp .7s ease both; }
+  .pop-in{ animation: popIn .5s cubic-bezier(.34,1.56,.64,1) both; }
 
   .tool-card{ transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
   .tool-card:hover{ transform: translateY(-5px); box-shadow: 0 12px 28px rgba(42,46,34,.14); border-color: var(--color-green); }
@@ -610,7 +615,7 @@
               </div>
             </div>
 
-            <div class="pop-in flex items-center gap-4 bg-cream rounded-2xl border border-ink/5 p-4" style="transition-delay:.08s">
+            <div class="pop-in flex items-center gap-4 bg-cream rounded-2xl border border-ink/5 p-4" style="animation-delay:.08s">
               <img src="https://flagpedia.net/data/flags/w1160/gb.webp" alt="Bandera de Reino Unido" referrerpolicy="no-referrer" class="w-11 h-11 rounded-full object-cover border-2 border-paper shadow-sm shrink-0">
               <div class="flex-1">
                 <div class="flex items-center justify-between mb-4">
@@ -631,7 +636,7 @@
               </div>
             </div>
 
-            <div class="pop-in flex items-center gap-4 bg-cream rounded-2xl border border-ink/5 p-4" style="transition-delay:.16s">
+            <div class="pop-in flex items-center gap-4 bg-cream rounded-2xl border border-ink/5 p-4" style="animation-delay:.16s">
               <img src="https://flagpedia.net/data/flags/w1160/fr.webp" alt="Bandera de Francia" referrerpolicy="no-referrer" class="w-11 h-11 rounded-full object-cover border-2 border-paper shadow-sm shrink-0">
               <div class="flex-1">
                 <div class="flex items-center justify-between mb-4">
@@ -677,11 +682,11 @@
                   <iconify-icon icon="solar:clipboard-list-bold-duotone" class="text-pink-deep" width="26"></iconify-icon>
                   <span class="text-[13px] font-semibold text-ink leading-tight">Project coordination</span>
                 </div>
-                <div class="tool-card pop-in flex flex-col gap-2 bg-pink-soft/70 rounded-xl p-3 border border-pink/20" style="transition-delay:.08s">
+                <div class="tool-card pop-in flex flex-col gap-2 bg-pink-soft/70 rounded-xl p-3 border border-pink/20" style="animation-delay:.08s">
                   <iconify-icon icon="solar:users-group-rounded-bold-duotone" class="text-pink-deep" width="26"></iconify-icon>
                   <span class="text-[13px] font-semibold text-ink leading-tight">Stakeholder communication</span>
                 </div>
-                <div class="tool-card pop-in flex flex-col gap-2 bg-pink-soft/70 rounded-xl p-3 border border-pink/20" style="transition-delay:.16s">
+                <div class="tool-card pop-in flex flex-col gap-2 bg-pink-soft/70 rounded-xl p-3 border border-pink/20" style="animation-delay:.16s">
                   <iconify-icon icon="solar:checklist-minimalistic-bold-duotone" class="text-pink-deep" width="26"></iconify-icon>
                   <span class="text-[13px] font-semibold text-ink leading-tight">Task prioritization</span>
                 </div>
@@ -693,15 +698,15 @@
                 <span class="w-2 h-2 rounded-full bg-green inline-block"></span> Logística
               </p>
               <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
-                <div class="tool-card pop-in flex flex-col gap-2 bg-green-soft/70 rounded-xl p-3 border border-green/20" style="transition-delay:.24s">
+                <div class="tool-card pop-in flex flex-col gap-2 bg-green-soft/70 rounded-xl p-3 border border-green/20" style="animation-delay:.24s">
                   <iconify-icon icon="solar:delivery-bold-duotone" class="text-green-deep" width="26"></iconify-icon>
                   <span class="text-[13px] font-semibold text-ink leading-tight">Logistics operations</span>
                 </div>
-                <div class="tool-card pop-in flex flex-col gap-2 bg-green-soft/70 rounded-xl p-3 border border-green/20" style="transition-delay:.32s">
+                <div class="tool-card pop-in flex flex-col gap-2 bg-green-soft/70 rounded-xl p-3 border border-green/20" style="animation-delay:.32s">
                   <iconify-icon icon="solar:box-bold-duotone" class="text-green-deep" width="26"></iconify-icon>
                   <span class="text-[13px] font-semibold text-ink leading-tight">Supply chain support</span>
                 </div>
-                <div class="tool-card pop-in flex flex-col gap-2 bg-green-soft/70 rounded-xl p-3 border border-green/20" style="transition-delay:.4s">
+                <div class="tool-card pop-in flex flex-col gap-2 bg-green-soft/70 rounded-xl p-3 border border-green/20" style="animation-delay:.4s">
                   <iconify-icon icon="solar:layers-minimalistic-bold-duotone" class="text-green-deep" width="26"></iconify-icon>
                   <span class="text-[13px] font-semibold text-ink leading-tight">Inventory coordination</span>
                 </div>
@@ -713,15 +718,15 @@
                 <span class="w-2 h-2 rounded-full inline-block" style="background:var(--color-amber-deep)"></span> Procesos &amp; datos
               </p>
               <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
-                <div class="tool-card pop-in flex flex-col gap-2 bg-yellow-soft/70 rounded-xl p-3 border border-ink/10" style="transition-delay:.48s">
+                <div class="tool-card pop-in flex flex-col gap-2 bg-yellow-soft/70 rounded-xl p-3 border border-ink/10" style="animation-delay:.48s">
                   <iconify-icon icon="solar:document-text-bold-duotone" style="color:var(--color-amber-deep)" width="26"></iconify-icon>
                   <span class="text-[13px] font-semibold text-ink leading-tight">Documentation control</span>
                 </div>
-                <div class="tool-card pop-in flex flex-col gap-2 bg-yellow-soft/70 rounded-xl p-3 border border-ink/10" style="transition-delay:.56s">
+                <div class="tool-card pop-in flex flex-col gap-2 bg-yellow-soft/70 rounded-xl p-3 border border-ink/10" style="animation-delay:.56s">
                   <iconify-icon icon="solar:graph-up-bold-duotone" style="color:var(--color-amber-deep)" width="26"></iconify-icon>
                   <span class="text-[13px] font-semibold text-ink leading-tight">Process improvement</span>
                 </div>
-                <div class="tool-card pop-in flex flex-col gap-2 bg-yellow-soft/70 rounded-xl p-3 border border-ink/10" style="transition-delay:.64s">
+                <div class="tool-card pop-in flex flex-col gap-2 bg-yellow-soft/70 rounded-xl p-3 border border-ink/10" style="animation-delay:.64s">
                   <iconify-icon icon="solar:chart-square-bold-duotone" style="color:var(--color-amber-deep)" width="26"></iconify-icon>
                   <span class="text-[13px] font-semibold text-ink leading-tight">Dashboards &amp; data</span>
                 </div>
@@ -808,13 +813,6 @@
     </footer>
 
   </main>
-
-<script>
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal, .pop-in').forEach(el => io.observe(el));
-</script>
 
 </body>
 </html>
